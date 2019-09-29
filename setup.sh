@@ -21,8 +21,21 @@ if [ "$#" -eq "1" ];then
 	
 	
 	else
-	
-	
+	  echo "cheking kernel version:"
+	  uname -a
+	  echo "installing iproute2..."
+		mkdir iproute2
+		cd iproute2
+		wget https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-5.2.0.tar.gz
+		tar xf iproute2-5.2.0.tar.gz
+		
+		echo "installing tcpreplay tcpdump and bridge-utils"
+		sudo apt-get install -y tcpreplay tcpdump bridge-utils
+		
+		echo "make TASim..."
+		make
+		echo "installing network driver..."
+		./installdriver.sh
 	
 	
 	fi
