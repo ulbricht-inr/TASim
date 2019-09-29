@@ -5,6 +5,8 @@
 #	2: install iproute2 tcpdump, tcpreplay, compile TASim and load driver
 if [ "$#" -eq "1" ];then
 	if [ "$1" -eq "1" ];then
+		read -p "This script will install kernel 5.2.15 and reboot with the new kernel, press [STRG]+[C] to cancel."
+
 		mkdir kernel5.2
 		cd kernel5.2
 		echo "downloading...."
