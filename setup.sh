@@ -23,6 +23,13 @@ if [ "$#" -eq "1" ];then
 	else
 	  echo "cheking kernel version:"
 	  uname -a
+	  uname -a | grep "5.2.15"
+	  if [ $? -ne 0 ]; then
+	  	echo "please install kernel 5.2.15 first"
+	  	echo "run setup.sh 1"
+	  	exit 1
+	  
+	  fi
 	  echo "installing iproute2..."
 		mkdir iproute2
 		cd iproute2
