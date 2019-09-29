@@ -32,9 +32,12 @@ if [ "$#" -eq "1" ];then
 	  fi
 	  echo "installing iproute2..."
 		mkdir iproute2
+		sudo apt-get install -y libdb5.3-dev build-essential bison flex
 		cd iproute2
-		wget https://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-5.2.0.tar.gz
-		tar xf iproute2-5.2.0.tar.gz
+		wget http://ftp.de.debian.org/debian/pool/main/i/iproute2/iproute2_5.2.0-1_amd64.deb
+		sudo dpkg -i iproute2_5.2.0-1_amd64.deb
+		cd ..
+	
 		
 		echo "installing tcpreplay tcpdump and bridge-utils"
 		sudo apt-get install -y tcpreplay tcpdump bridge-utils
