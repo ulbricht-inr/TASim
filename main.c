@@ -129,7 +129,7 @@ remove (void)
     INR_LOG_debug (loglevel_info"remove Module\n");
     INR_LOG_debug (loglevel_info"Reset Logic\n");
     //INR_remove_drv (dev);
-    if(probed){ 
+    if(probed) {
         probed--;
     }
 }

@@ -20,3 +20,7 @@ load:
 unload:
 	rmmod ./$(TARGET_MODULE).ko
 endif
+
+cleanup:
+	astyle *.c
+	astyle *.h

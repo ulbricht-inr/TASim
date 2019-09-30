@@ -63,7 +63,7 @@ static const struct net_device_ops INR_NW_netdev_ops = {
 };
 
 static const struct ethtool_ops INR_NW_ethtool_ops = {
-	.get_ts_info		= INR_NW_get_ts_info,
+    .get_ts_info		= INR_NW_get_ts_info,
 
 };
 
