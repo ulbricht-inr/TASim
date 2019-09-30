@@ -11,7 +11,7 @@ if you have the Kernel 5.2.x installed, ignore the install scripts just :
 * ./installdriver.sh
 
 The driver will create 4  virtual interfaces TN0..TN3, pairs of two are connected with eachother.
-TN0<-->TN1, TN2<-->TN3.
+TN0<-->TN1, TN2<-->TN3. Each interface have 8 TX queues. 
 
 ## TSN example:
 
